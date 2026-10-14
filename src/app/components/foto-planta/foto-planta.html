@@ -1,0 +1,18 @@
+<div class="contenedor-foto">
+  <h2>Sube la foto de tu planta</h2>
+
+  <!-- Input para seleccionar la foto -->
+  <input type="file" accept="image/*" (change)="capturarImagen($event)" />
+
+  <!-- Verificamos vistaPrevia si tiene o no foto -->
+  @if (vistaPrevia) {
+    <div class="contenedor-vista-previa" style="margin-top: 15px;">
+      <h3>Vista previa:</h3>
+      <img [src]="vistaPrevia" alt="Foto de la planta" style="max-width: 300px; border-radius: 8px;" />
+    </div>
+  } 
+  @else {
+    <p style="margin-top: 15px;">Aún no has seleccionado ninguna foto.</p>
+  }
+</div>
+
